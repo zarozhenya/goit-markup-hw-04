@@ -12,9 +12,11 @@
   --bg-first-color: #ffffff;
   --bg-second-color: #2f303a;
   --bg-third-color: #f5f4fa;
-  --botder-first-color: #ececec;
+  --border-first-color: #ececec;
   --border-second-color: #eeeeee;
   --section-padding: 94px;
+  --icon-first-color: #afb1b8;
+  --icon-second-color: #ffffff;
 }
 
 body {
@@ -76,6 +78,7 @@ ul {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
+
 /* Logo */
 .logo {
   font-family: 'Raleway';
@@ -97,7 +100,7 @@ ul {
 
 /* Header */
 .header {
-  border-bottom: 1px solid var(--botder-first-color);
+  border-bottom: 1px solid var(--border-first-color);
 }
 .header-container {
   display: flex;
@@ -134,7 +137,8 @@ ul {
   margin-right: 50px;
 }
 .contacts-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -142,6 +146,10 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--contacts-text-color);
+}
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -187,6 +195,14 @@ ul {
 }
 .preferences-item:not(:last-child) {
   margin-right: 30px;
+}
+.preferences .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-third-color);
+  height: 120px;
+  margin-bottom: 30px;
 }
 .preferences-title {
   font-size: 14px;
@@ -250,8 +266,7 @@ ul {
   display: block;
 }
 .team-description {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 .team-subtitle {
   font-size: 16px;
@@ -264,6 +279,31 @@ ul {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 16px;
+}
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+}
+.team-soc-item {
+  flex-basis: calc((100% - 30px) / 4);
+  height: 44px;
+}
+.team-soc-item:not(:last-child) {
+  margin-right: 10px;
+}
+.team-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 50%;
+  fill: var(--icon-first-color);
+}
+.team-soc-link:hover,
+.team-soc-link-focus {
+  background-color: var(--accent-color);
+  fill: var(--icon-second-color);
 }
 /* Footer */
 .footer {
